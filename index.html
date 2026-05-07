@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cortisol Slim Method — Rahasia Wanita 40+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+
+:root{
+  --c-primary:#72376A;
+  --c-gold:#C9A96E;
+  --c-gold-light:#E8D5B0;
+  --c-gold-dark:#A8823E;
+  --c-cream:#FAF6EF;
+  --c-linen:#F2EBE0;
+  --c-text:#2D2420;
+  --c-muted:#8B7D72;
+  --c-success:#5DB87A;
+  --c-error:#B85450;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --max-w:680px;
+  --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--c-cream);color:var(--c-text);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
+
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+section.dark{background:var(--c-primary)}
+section.linen{background:var(--c-linen)}
+section.cream{background:var(--c-cream)}
+
+/* TYPOGRAPHY */
+.display{font-family:var(--font-display);font-weight:700;font-size:clamp(30px,6vw,52px);line-height:1.1;color:var(--c-primary);letter-spacing:-0.01em}
+.display.light{color:var(--c-cream)}
+.subheadline{font-family:var(--font-display);font-style:italic;font-weight:600;font-size:clamp(18px,3vw,26px);color:var(--c-gold);line-height:1.35}
+.body-text{font-size:clamp(15px,2vw,17px);color:var(--c-text);line-height:1.8}
+.body-text.light{color:rgba(250,246,239,0.82)}
+.meta{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-muted)}
+.meta.gold{color:var(--c-gold)}
+
+/* ORNAMENT */
+.ornament{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.ornament::before,.ornament::after{content:'';flex:1;height:1px;background:var(--c-gold-light)}
+.ornament.dk::before,.ornament.dk::after{background:rgba(201,169,110,0.25)}
+
+/* CTA */
+.btn-cta{display:block;width:100%;padding:18px 32px;background:var(--c-gold);color:var(--c-primary);font-family:var(--font-body);font-size:17px;font-weight:500;border:none;border-radius:50px;cursor:pointer;text-align:center;letter-spacing:0.02em;transition:background 0.2s var(--ease),transform 0.2s var(--ease);animation:pulse 2.8s ease-in-out infinite}
+.btn-cta:hover{animation:none;transform:scale(1.02);background:var(--c-gold-dark)}
+.btn-cta:active{transform:scale(0.99)}
+.btn-sub{text-align:center;font-size:13px;color:var(--c-muted);margin-top:10px;font-style:italic}
+.btn-sub.light{color:rgba(201,169,110,0.65)}
+
+/* TRUST */
+.trust-strip{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:16px}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--c-success);font-weight:500}
+
+/* HERO */
+.hero{background:var(--c-primary);padding:80px 0 0;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-block;background:rgba(201,169,110,0.14);border:1px solid rgba(201,169,110,0.28);color:var(--c-gold);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:6px 16px;border-radius:50px;margin-bottom:24px}
+.hero-headline{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,6vw,52px);line-height:1.1;color:var(--c-cream);letter-spacing:-0.01em;margin-bottom:14px}
+.hero-headline span{color:var(--c-gold)}
+.hero-sub{font-family:var(--font-display);font-style:italic;font-size:clamp(16px,3vw,23px);color:var(--c-gold);line-height:1.4;margin-bottom:32px}
+.hero-img{margin-top:48px}
+.hero-img img{width:100%;max-height:520px;object-fit:cover;object-position:top center;border-radius:20px 20px 0 0}
+
+/* PAIN LIST */
+.pain-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:28px 0}
+.pain-list li{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;background:var(--c-linen);border-radius:8px;border-left:3px solid var(--c-gold-light);font-size:15px;opacity:0;transform:translateX(-16px);transition:opacity 0.5s var(--ease),transform 0.5s var(--ease)}
+.pain-list li.visible{opacity:1;transform:translateX(0)}
+.pain-list li .ico{font-size:18px;flex-shrink:0;margin-top:2px}
+
+/* PIVOT BOX */
+.pivot-box{background:var(--c-primary);border-radius:16px;padding:32px 28px;text-align:center;margin:40px 0;position:relative;overflow:hidden}
+.pivot-box::before{content:'';position:absolute;inset:1px;border-radius:15px;border:1px solid rgba(201,169,110,0.22);pointer-events:none}
+.pivot-text{font-family:var(--font-display);font-weight:700;font-size:clamp(22px,4vw,32px);color:var(--c-gold);line-height:1.25}
+
+/* BEFORE/AFTER */
+.ba-wrap{border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(114,55,106,0.16)}
+.ba-wrap img{width:100%;height:auto;display:block}
+
+/* TESTI */
+.testi-card{background:var(--c-cream);border:1px solid var(--c-gold-light);border-radius:16px;padding:24px 22px;margin-bottom:16px;position:relative;opacity:0;transform:translateY(20px);transition:opacity 0.55s var(--ease),transform 0.55s var(--ease)}
+.testi-card.visible{opacity:1;transform:translateY(0)}
+.testi-card::before{content:'\201C';font-family:var(--font-display);font-size:72px;color:var(--c-gold-light);line-height:1;position:absolute;top:-8px;left:16px}
+.testi-text{font-style:italic;font-size:15px;color:var(--c-text);line-height:1.7;padding-top:16px;margin-bottom:14px}
+.testi-author{font-size:13px;font-weight:500;color:var(--c-cream)}
+.testi-stars{color:var(--c-gold);font-size:13px}
+.testi-card.dk-card{background:rgba(255,255,255,0.04);border-color:rgba(201,169,110,0.18)}
+.testi-card.dk-card .testi-text{color:rgba(250,246,239,0.82)}
+.testi-card.dk-card::before{color:rgba(201,169,110,0.18)}
+
+/* MOCKUP */
+.mockup-wrap{position:relative;margin:40px auto;max-width:420px}
+.mockup-wrap img{width:100%;border-radius:16px;box-shadow:0 32px 80px rgba(114,55,106,0.32)}
+.mockup-badge{position:absolute;top:-12px;right:-8px;background:var(--c-gold);color:var(--c-primary);font-size:11px;font-weight:700;letter-spacing:0.05em;padding:6px 14px;border-radius:50px;box-shadow:0 4px 16px rgba(201,169,110,0.4)}
+
+/* PILLARS */
+.pillar{padding:24px 22px;border-radius:16px;margin-bottom:16px;border:1px solid rgba(201,169,110,0.22);background:rgba(255,255,255,0.03)}
+.pillar-num{font-family:var(--font-display);font-size:48px;font-weight:700;color:rgba(250,246,239,0.55);line-height:1;margin-bottom:4px}
+.pillar-title{font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--c-gold);margin-bottom:8px}
+.pillar-body{font-size:15px;color:rgba(250,246,239,0.78);line-height:1.7}
+
+/* PRODUCT CARDS */
+.product-card{background:var(--c-cream);border:1px solid var(--c-gold-light);border-radius:16px;padding:24px 22px;margin-bottom:16px;opacity:0;transform:translateY(16px);transition:opacity 0.5s var(--ease),transform 0.5s var(--ease)}
+.product-card.visible{opacity:1;transform:translateY(0)}
+.product-card-label{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--c-gold);margin-bottom:6px}
+.product-card-title{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--c-primary);margin-bottom:10px}
+.product-card-body{font-size:14px;color:var(--c-muted);line-height:1.7;margin-bottom:12px}
+.product-card-value{font-size:13px;font-weight:500;color:var(--c-muted);text-decoration:line-through}
+
+.benefit-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.benefit-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--c-text)}
+.benefit-list li::before{content:'✓';color:var(--c-success);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* VALUE STACK */
+.value-stack{background:var(--c-primary);border:1px solid rgba(201,169,110,0.22);border-radius:16px;padding:32px 24px;text-align:center;margin:40px 0 0}
+.price-old{font-size:16px;color:var(--c-muted);position:relative;display:inline-block;margin-bottom:8px}
+.price-old::after{content:'';position:absolute;left:0;top:52%;height:2px;background:var(--c-error);width:0;transition:width 0.6s var(--ease)}
+.price-old.struck::after{width:100%}
+.price-new{font-family:var(--font-display);font-size:clamp(52px,10vw,72px);font-weight:700;color:var(--c-gold);line-height:1;display:block;margin:4px 0 8px}
+.price-save{font-size:13px;font-weight:500;color:var(--c-success);margin-bottom:28px}
+
+/* FOR WHO */
+.check-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.check-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--c-text);padding:14px 16px;background:var(--c-cream);border-radius:8px;border:1px solid var(--c-gold-light)}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--c-gold-light);padding:20px 0}
+.faq-item:first-child{border-top:1px solid var(--c-gold-light)}
+.faq-q{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--c-primary);margin-bottom:10px}
+.faq-a{font-size:15px;color:var(--c-muted);line-height:1.75}
+
+/* FAQ ACCORDION */
+.faq-accordion{border-top:1px solid var(--c-gold-light)}
+.faq-item{border-bottom:1px solid var(--c-gold-light)}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--c-primary);text-align:left;line-height:1.35;transition:color 0.2s}
+.faq-q:hover{color:var(--c-gold)}
+.faq-q[aria-expanded="true"]{color:var(--c-gold)}
+.faq-icon{flex-shrink:0;font-size:22px;font-weight:300;color:var(--c-gold);transition:transform 0.3s var(--ease);line-height:1}
+.faq-q[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
+.faq-a-wrap{max-height:0;overflow:hidden;transition:max-height 0.4s var(--ease),padding 0.3s var(--ease)}
+.faq-a-wrap.open{max-height:400px}
+.faq-a{font-size:15px;color:var(--c-muted);line-height:1.75;padding-bottom:20px}
+
+/* DESIRE */
+.desire-img{margin:-1px -24px 48px;overflow:hidden}
+.desire-img img{width:calc(100% + 48px);max-height:500px;object-fit:cover;object-position:top center}
+
+/* CLOSING */
+.closing-note{font-family:var(--font-display);font-style:italic;font-size:clamp(17px,3vw,22px);color:rgba(250,246,239,0.72);line-height:1.6;text-align:center;margin-bottom:40px}
+
+/* FOOTER */
+footer{background:var(--c-primary);padding:32px 24px;text-align:center;border-top:1px solid rgba(201,169,110,0.12)}
+footer p{font-size:12px;color:rgba(250,246,239,0.28);line-height:1.7}
+
+/* STICKY */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;background:var(--c-primary);border-top:1px solid rgba(201,169,110,0.28);padding:12px 20px 20px;z-index:999;transform:translateY(100%);transition:transform 0.4s var(--ease)}
+.sticky-bar.show{transform:translateY(0)}
+.sticky-bar .btn-cta{animation:none;font-size:15px;padding:14px 20px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s var(--ease),transform 0.65s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* KEYFRAMES */
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(201,169,110,0.35)}
+  50%{box-shadow:0 0 0 14px rgba(201,169,110,0)}
+}
+
+@media(max-width:480px){
+  section{padding:56px 0}
+  .hero{padding:60px 0 0}
+  .btn-cta{font-size:15px;padding:16px 24px}
+  .pillar{padding:18px 16px}
+  .trust-strip{gap:12px}
+  .trust-item{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">Khusus Wanita 40+</div>
+    <h1 class="hero-headline">
+      "Diet Apapun Gak Akan Berhasil<br>Selama Kamu Belum Tau<br><span>Satu Hal Ini"</span>
+    </h1>
+    <p class="hero-sub">
+      Ini Rahasia yang Dokter Jarang Bahas ke Wanita 40+ —<br>
+      dan Hasilnya Bisa Kamu Rasain dalam 7 Hari Pertama
+    </p>
+    <div class="ba-wrap reveal" style="margin-bottom:32px">
+      <img src="https://drive.google.com/thumbnail?id=1KuFWzebS5i1b45ur2O9JvUXtqn5oiiOs&sz=w1000" alt="Before and after Cortisol Slim Method" loading="eager">
+    </div>
+    <a href="#order" class="btn-cta">&#9654; &nbsp;Ya, Saya Mau Tau Rahasianya</a>
+    <p class="btn-sub light">Akses seumur hidup &middot; Bayar sekali &middot; Langsung download</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="cream">
+  <div class="container">
+    <div class="ornament reveal"><span class="meta gold">Kenalan dulu sama masalahnya</span></div>
+    <h2 class="display reveal" style="margin-bottom:16px">Kalau Kamu Pernah<br>Ngerasa Salah Satu Hal Ini...</h2>
+    <p class="body-text reveal" style="margin-bottom:8px">Kamu udah ngurangin porsi makan. Udah ikut kelas gym. Udah coba intermittent fasting. Tapi timbangan? Gak bergerak. Atau malah naik.</p>
+    <p class="body-text reveal" style="color:var(--c-muted);margin-bottom:8px">Dan yang paling nyebelin — perut makin 'maju' padahal rasanya udah hidup se-disiplin mungkin.</p>
+    <ul class="pain-list">
+      <li><span class="ico">😔</span>Baju lama yang dulu muat sekarang gak bisa dikancing lagi</li>
+      <li><span class="ico">⚡</span>Energi drop parah setelah jam 2 siang, padahal kerjaan masih numpuk</li>
+      <li><span class="ico">🍫</span>Craving manis malam hari yang rasanya TIDAK BISA ditahan</li>
+      <li><span class="ico">😴</span>Tidur 8 jam tapi bangun masih capek dan "kosong"</li>
+      <li><span class="ico">🔄</span>Sudah coba berbagai diet tapi hasilnya selalu balik lagi dalam 2 minggu</li>
+    </ul>
+    <div class="pivot-box reveal">
+      <p class="pivot-text">Tubuh kamu tidak rusak.<br>Strateginya yang salah.</p>
+      <p style="font-size:15px;color:rgba(250,246,239,0.62);margin-top:12px;line-height:1.7">Setelah usia 40, tubuh wanita bekerja dengan cara yang <em>berbeda</em>. Hormon bergeser. Dan tubuh mulai menerjemahkan diet ketat &amp; olahraga keras sebagai ancaman — sehingga justru menyimpan lebih banyak lemak.</p>
+    </div>
+    <div class="reveal" style="margin:32px 0;border-radius:16px;overflow:hidden;box-shadow:0 16px 48px rgba(114,55,106,0.12)">
+      <img src="https://drive.google.com/thumbnail?id=1pHcHsattNacwMqY_9fH8qEkzDwIi9R3M&sz=w1000" alt="Wanita 40+ yang frustrasi dengan dietnya" loading="lazy" style="width:100%;display:block">
+    </div>
+    <p class="body-text reveal">Bukan karena kamu kurang niat. Bukan karena kamu lemah. Tapi karena cara lama memang sudah tidak relevan untuk tubuh yang sekarang.</p>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF 1 -->
+<section class="linen">
+  <div class="container">
+    <div class="ornament reveal"><span class="meta gold">Mereka sudah membuktikannya</span></div>
+    <h2 class="display reveal" style="margin-bottom:32px;text-align:center">Inilah yang Terjadi Saat Wanita 40+ Berhenti Menyiksa Tubuh Mereka</h2>
+    <div class="testi-card reveal">
+      <p class="testi-text">"Seminggu pakai metode ini, perut saya yang biasanya kembung tiap malam udah mulai kempes. Yang bikin kaget, saya gak ngerasa lapar atau tersiksa sama sekali."</p>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="testi-author">— Dewi R., 44 tahun, Jakarta</span>
+        <span class="testi-stars">★★★★★</span>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <p class="testi-text">"Udah coba banyak program diet tapi selalu gagal. Ini pertama kalinya saya ngerasa bisa lakuin ini jangka panjang. Energi saya jauh lebih stabil dan craving malam hampir hilang total."</p>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="testi-author">— Sari W., 47 tahun, Surabaya</span>
+        <span class="testi-stars">★★★★★</span>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <p class="testi-text">"Saya kira ini bakal ribet kayak program lain. Ternyata cuma perlu 10–20 menit sehari. Badan saya mulai merespons dan celana lama saya udah bisa muat lagi di minggu ke-2."</p>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="testi-author">— Nurul A., 42 tahun, Bandung</span>
+        <span class="testi-stars">★★★★★</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCE PRODUCT -->
+<section class="dark">
+  <div class="container">
+    <div class="ornament dk reveal"><span class="meta gold">Memperkenalkan...</span></div>
+    <h2 class="display light reveal" style="margin-bottom:8px">Cortisol Slim <span style="color:var(--c-gold)">Method</span></h2>
+    <p class="subheadline reveal" style="margin-bottom:28px">Rahasia Wanita 40+ Tetap Ramping<br>Tanpa Olahraga Ekstrem</p>
+    <div class="mockup-wrap reveal">
+      <img src="https://drive.google.com/thumbnail?id=1qyoDCvS_rCnJ0xoYOPdMv2MU6frgjy9D&sz=w1000" alt="Cortisol Slim Method — Ebook Digital" loading="lazy">
+      <div class="mockup-badge">+ 3 BONUS GRATIS</div>
+    </div>
+    <p class="body-text light reveal" style="margin-bottom:8px">Sistem 7 hari yang dirancang khusus untuk wanita di atas 40 tahun — yang mau menurunkan berat badan dengan cara yang lebih masuk akal, lebih manusiawi, dan terbukti bisa dipertahankan jangka panjang.</p>
+    <p class="body-text reveal" style="color:rgba(250,246,239,0.5);margin-bottom:40px">Bukan tentang menghukum tubuh. Tapi tentang mengajak tubuh bekerja sama.</p>
+
+    <h3 class="display light reveal" style="font-size:clamp(24px,4vw,36px);margin-bottom:24px;text-align:center">3 Pilar Utama</h3>
+    <div class="pillar reveal">
+      <div class="pillar-num">01</div>
+      <div class="pillar-title">Calm Plate Method</div>
+      <p class="pillar-body">Bukan diet kalori. Tapi pola makan yang bikin kenyang lebih lama, energi stabil, dan craving lenyap — tanpa perlu timbang makanan atau nahan lapar sampai pusing.</p>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-num">02</div>
+      <div class="pillar-title">Low-Stress Movement</div>
+      <p class="pillar-body">Cukup 10–20 menit sehari. Gerakan aman untuk lutut dan sendi — bukan HIIT, bukan cardio berjam-jam — tapi cukup untuk menjaga massa otot dan mempercepat metabolisme.</p>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-num">03</div>
+      <div class="pillar-title">Cortisol Calm Routine</div>
+      <p class="pillar-body">Mengatasi akar masalah yang paling sering diabaikan: stres, tidur buruk, dan craving malam. Rutinitas 5–15 menit yang menenangkan sistem tubuh dan membuatnya siap melepas lemak.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED + CTA -->
+<section class="cream" id="cta-1">
+  <div class="container">
+    <div class="ornament reveal"><span class="meta gold">Yang kamu dapatkan hari ini</span></div>
+    <h2 class="display reveal" style="margin-bottom:32px;text-align:center">Satu Paket Lengkap,<br>Satu Harga</h2>
+
+    <div class="product-card reveal">
+      <div class="product-card-label">📘 Ebook Utama</div>
+      <div class="product-card-title">Cortisol Slim Method</div>
+      <p class="product-card-body">52 halaman panduan lengkap dari memahami kenapa cara lama gagal, hingga rencana harian 7 hari yang bisa langsung dijalankan.</p>
+      <ul class="benefit-list">
+        <li>Kenapa tubuh 40+ tidak merespons cara lama</li>
+        <li>Calm Plate Method — makan cerdas tanpa lapar</li>
+        <li>Low-Stress Movement — gerak 10 menit yang efektif</li>
+        <li>Cortisol Calm Routine — atasi stres &amp; craving malam</li>
+        <li>Rencana lengkap 7 hari siap pakai</li>
+      </ul>
+      <p class="product-card-value" style="margin-top:14px">Nilai: Rp199.000</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-label">🥗 Bonus #1</div>
+      <div class="product-card-title">Cortisol Slim Nutrition Guide</div>
+      <p class="product-card-body">Formula Calm Plate, daftar sarapan tinggi protein, Anti-Craving Snack List, dan Night Craving Rescue Sheet — semua dalam satu lembar ringkas.</p>
+      <p class="product-card-value">Nilai: Rp97.000</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-label">🏃‍♀️ Bonus #2</div>
+      <div class="product-card-title">Calm Routine &amp; Movement Menu</div>
+      <p class="product-card-body">Menu gerakan 10 menit yang tinggal dipilih sesuai mood. Jadwal mingguan, 5-Minute Calm Reset Checklist, dan Evening Wind-Down Routine Template.</p>
+      <p class="product-card-value">Nilai: Rp97.000</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-label">📋 Bonus #3</div>
+      <div class="product-card-title">7-Day Action Workbook &amp; Tracker</div>
+      <p class="product-card-body">Buku kerja harian lengkap. Body Shift Audit, Daily Tracker Hari 1–7, Weekly Movement Tracker, dan lembar komitmen. Cukup print atau isi di gadget.</p>
+      <p class="product-card-value">Nilai: Rp97.000</p>
+    </div>
+
+    <div class="value-stack reveal">
+      <p class="price-old" id="price-old">Total nilai paket: Rp490.000</p>
+      <span class="price-new">Rp127.000</span>
+      <p class="price-save">Hemat Rp363.000 — Akses Seumur Hidup, Bayar Sekali</p>
+      <a href="#order" class="btn-cta">▶ &nbsp;Ya, Saya Mau Akses Sekarang — Rp127.000</a>
+      <div class="trust-strip" style="margin-top:16px">
+        <span class="trust-item"><span>✓</span> Akses seumur hidup</span>
+        <span class="trust-item"><span>✓</span> Tanpa biaya bulanan</span>
+        <span class="trust-item"><span>✓</span> Pembayaran aman</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF 2 -->
+<section class="dark">
+  <div class="container">
+    <div class="ornament dk reveal"><span class="meta gold">Lebih banyak yang sudah merasakan</span></div>
+    <h2 class="display light reveal" style="margin-bottom:32px;text-align:center">Mereka Sudah Merasakannya.<br><span style="color:var(--c-gold)">Sekarang Giliran Kamu.</span></h2>
+    <div class="testi-card dk-card reveal">
+      <p class="testi-text">"Saya pikir masalah saya kurang disiplin. Setelah baca ini baru sadar — ternyata cara saya yang salah, bukan tubuh saya. Minggu pertama tidur saya udah jauh lebih pulas."</p>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="testi-author">— Rina M., 46 tahun, Yogyakarta</span>
+        <span class="testi-stars">★★★★★</span>
+      </div>
+    </div>
+    <div class="testi-card dk-card reveal">
+      <p class="testi-text">"Bonus workbook-nya yang bikin saya konsisten. Ada yang perlu di-checklist tiap hari jadi saya gak pernah bingung mau mulai dari mana."</p>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="testi-author">— Fitri H., 43 tahun, Semarang</span>
+        <span class="testi-stars">★★★★★</span>
+      </div>
+    </div>
+    <div class="testi-card dk-card reveal">
+      <p class="testi-text">"Dua minggu pakai Cortisol Slim Method dan saya turun 2.5 kg. Yang lebih penting: saya gak ngerasa tersiksa. Ini pertama kalinya diet terasa sustainable."</p>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="testi-author">— Anggraeni P., 49 tahun, Medan</span>
+        <span class="testi-stars">★★★★★</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="linen">
+  <div class="container">
+    <h2 class="display reveal" style="margin-bottom:24px">Ini Untuk Kamu Jika...</h2>
+    <ul class="check-list reveal" style="margin-bottom:48px">
+      <li><span style="font-size:18px;flex-shrink:0">✅</span>Kamu wanita 40+ yang frustrasi karena cara lama sudah tidak berhasil lagi</li>
+      <li><span style="font-size:18px;flex-shrink:0">✅</span>Kamu punya waktu terbatas dan tidak mau program yang menyita seharian</li>
+      <li><span style="font-size:18px;flex-shrink:0">✅</span>Kamu sudah capek yo-yo diet — turun naik, turun naik tanpa akhir</li>
+      <li><span style="font-size:18px;flex-shrink:0">✅</span>Kamu mau perubahan yang sustainable, bukan sekadar turun berat sementara</li>
+      <li><span style="font-size:18px;flex-shrink:0">✅</span>Kamu ingin energi lebih stabil dan tidur lebih nyenyak</li>
+    </ul>
+    <h2 class="display reveal" style="margin-bottom:24px;color:var(--c-error);font-size:clamp(24px,4vw,36px)">Ini BUKAN Untuk Kamu Jika...</h2>
+    <ul class="check-list reveal">
+      <li><span style="font-size:18px;flex-shrink:0">❌</span>Kamu mencari "magic pill" atau penurunan 10 kg dalam seminggu</li>
+      <li><span style="font-size:18px;flex-shrink:0">❌</span>Kamu tidak mau berkomitmen minimal 10–20 menit sehari</li>
+      <li><span style="font-size:18px;flex-shrink:0">❌</span>Kamu sudah punya kondisi kesehatan serius dan belum konsultasi dokter</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="cream">
+  <div class="container">
+    <div class="ornament reveal"><span class="meta gold">Pertanyaan yang sering muncul</span></div>
+    <h2 class="display reveal" style="margin-bottom:32px;text-align:center">Ada yang Mengganjal?</h2>
+    <div class="faq-accordion reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">"Saya sudah coba banyak program, kenapa ini berbeda?"<span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Karena ini bukan program diet generik. Cortisol Slim Method dirancang spesifik untuk perubahan hormonal yang terjadi setelah usia 40. Alih-alih melawan tubuh, metode ini mengajak tubuh bekerja sama &#8212; sehingga hasilnya lebih bertahan lama.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">"Apakah saya perlu beli peralatan olahraga khusus?"<span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Tidak. Semua gerakan bisa dilakukan di rumah, tanpa alat apapun. Bahkan bisa dilakukan di ruang tamu sambil nonton TV.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">"Berapa lama sampai saya melihat hasilnya?"<span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Banyak peserta merasakan perbedaan di energi dan kualitas tidur dalam 3&#8211;5 hari pertama. Perubahan fisik mulai terlihat di minggu ke-2 hingga ke-3, tergantung kondisi awal tubuh masing-masing.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">"Apakah saya harus berhenti makan nasi?"<span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Sama sekali tidak. Cortisol Slim Method justru mengajarkan cara makan nasi dengan cerdas &#8212; porsi yang tepat, dikombinasikan dengan protein dan serat &#8212; tanpa rasa bersalah.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">"Bagaimana cara mengaksesnya setelah beli?"<span class="faq-icon">+</span></button>
+        <div class="faq-a-wrap"><p class="faq-a">Setelah pembayaran dikonfirmasi, kamu akan langsung mendapatkan link download ke semua 4 file PDF. Bisa diakses dari HP, tablet, atau laptop &#8212; kapan saja, di mana saja.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIRE + FINAL CTA -->
+<section class="dark" style="padding-top:0;overflow:hidden" id="order">
+  <div class="desire-img">
+    <img src="https://drive.google.com/thumbnail?id=1Y8YNTdegS6hsX30jtQYZhSAnuhXh2TbO&sz=w1000" alt="Wanita 40+ yang energik dan percaya diri" loading="lazy">
+  </div>
+  <div class="container">
+    <div class="ornament dk reveal"><span class="meta gold">Satu keputusan kecil</span></div>
+    <h2 class="display light reveal" style="margin-bottom:16px;text-align:center">
+      Kamu Sudah Terlalu Lama<br>
+      <span style="color:var(--c-gold)">Menyiksa Tubuh<br>dengan Cara yang Salah.</span>
+    </h2>
+    <p class="closing-note reveal">Sudah saatnya coba pendekatan yang berbeda —<br>yang lebih tenang, lebih masuk akal,<br>dan terbukti bekerja untuk tubuh di usia ini.</p>
+
+    <div style="text-align:center;margin-bottom:24px" class="reveal">
+      <p style="font-size:13px;color:rgba(250,246,239,0.45);margin-bottom:4px">Total nilai: <span style="text-decoration:line-through">Rp490.000</span></p>
+      <p style="font-family:var(--font-display);font-size:clamp(52px,10vw,72px);font-weight:700;color:var(--c-gold);line-height:1">Rp127.000</p>
+      <p style="font-size:13px;color:var(--c-success);margin-top:4px;font-weight:500">Akses Seumur Hidup — Bayar Sekali</p>
+    </div>
+
+    <a href="#order" class="btn-cta reveal" style="max-width:560px;margin:0 auto 12px">▶ &nbsp;Dapatkan Akses Sekarang — Rp127.000</a>
+    <p class="btn-sub light reveal">Klik sekarang dan mulai 7 hari pertama kamu malam ini</p>
+    <div class="trust-strip reveal" style="margin-top:20px">
+      <span class="trust-item"><span>✓</span> Akses seumur hidup</span>
+      <span class="trust-item"><span>✓</span> Tanpa biaya bulanan</span>
+      <span class="trust-item"><span>✓</span> Pembayaran 100% aman</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Cortisol Slim Method. Semua hak dilindungi.<br>
+  Produk digital ini tidak menggantikan saran medis profesional.<br>
+  Konsultasikan kondisi kesehatan kamu dengan dokter sebelum memulai program apapun.</p>
+</footer>
+
+<!-- STICKY CTA BAR -->
+<div class="sticky-bar" id="sticky-bar">
+  <a href="#order" class="btn-cta">▶ &nbsp;Akses Sekarang — Rp127.000</a>
+</div>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal,.testi-card,.product-card,.pain-list li').forEach(el => io.observe(el));
+
+document.querySelectorAll('.pain-list li').forEach((li, i) => {
+  li.style.transitionDelay = i * 0.1 + 's';
+});
+
+document.querySelectorAll('.product-card').forEach((c, i) => {
+  c.style.transitionDelay = i * 0.1 + 's';
+});
+
+const priceOld = document.getElementById('price-old');
+if (priceOld) {
+  const po = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => priceOld.classList.add('struck'), 400);
+        po.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  po.observe(priceOld);
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-q').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.nextElementSibling.classList.add('open');
+    }
+  });
+});
+
+const stickyBar = document.getElementById('sticky-bar');
+let stickyOn = false;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  const nearEnd = y + window.innerHeight >= document.body.offsetHeight - 200;
+  if (y > window.innerHeight * 0.3 && !nearEnd) {
+    if (!stickyOn) { stickyBar.classList.add('show'); stickyOn = true; }
+  } else {
+    if (stickyOn) { stickyBar.classList.remove('show'); stickyOn = false; }
+  }
+}, { passive: true });
+</script>
+</body>
+</html>
